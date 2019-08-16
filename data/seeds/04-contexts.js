@@ -1,13 +1,14 @@
-
-exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
+exports.seed = function (knex) {
+  return knex('contexts')
+    .truncate()
     .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+      return knex('contexts').insert([
+        { id: 1, contexts: 'At home' },
+        { id: 2, contexts: 'At work' },
+        { id: 3, contexts: 'At school' },
+        { id: 4, contexts: 'Online' },
+        { id: 5, contexts: 'At the pool' },
+        { id: 6, contexts: 'in my room' }
       ]);
     });
 };
