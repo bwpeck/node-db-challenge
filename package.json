@@ -1,0 +1,27 @@
+{
+  "name": "db-challenge",
+  "version": "1.0.0",
+  "description": "sprint for DB-Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "nachobellgrande"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwpeck/node-db-challenge.git"
+  },
+  "author": "Benjamin Peck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwpeck/node-db-challenge/issues"
+  },
+  "homepage": "https://github.com/bwpeck/node-db-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.1",
+    "sqlite3": "^4.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
