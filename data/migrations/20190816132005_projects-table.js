@@ -3,13 +3,15 @@ exports.up = function(knex) {
         .createTable('projects', tbl => {
             tbl.increments();
             tbl.string('name', 255)
+                .unique()
                 .notNullable();
             tbl.string('description', 255);
             tbl.boolean('completed').defaultTo(false);
         })
         .createTable('tasks', tbl => {
             tbl.increments();
-            tbl.string('descript', 255)
+            tbl.string('description', 255)
+                .unique()
                 .notNullable();
             tbl.string('notes', 255);
             tbl.boolean('completed').defaultTo(false);
@@ -23,13 +25,13 @@ exports.up = function(knex) {
         })
         .createTable('resources', tbl => {
             tbl.increments();
-            tbl.string('name', 255)
-            .notNullable();
-            tbl.string('desc', 255);
+            tbl.string('name', 255).notNullable().unique();
+            tbl.string('description', 255);
         })
         .createTable('contexts', tbl => {
             tbl.increments();
             tbl.string('contexts', 255)
+                .unique()
                 .notNullable();
         })
         .createTable('project_resources', tbl => {
