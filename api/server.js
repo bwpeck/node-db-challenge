@@ -1,3 +1,4 @@
+
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -20,13 +21,6 @@ server.get('/', (req, res, next) => {
 server.use('/projects', projectsRouter);
 server.use('/tasks', tasksRouter);
 server.use('/resources', resourcesRouter);
-server.use('/contexts', contextsRouter)
-
-server.use(errorHandler);
-
-function errorHandler(error, req, res, next) {
-    console.log(error.err);
-    res.status(error.stat).json({message: error.message})
-}
+server.use('/contexts', contextsRouter);
 
 module.exports = server;

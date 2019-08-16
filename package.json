@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "sprint for DB-Node",
   "main": "index.js",
+  "server": "nodemon index.js",
   "scripts": {
+    "server": "nodemon index.js",
     "test": "nachobellgrande"
   },
   "repository": {
